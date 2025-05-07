@@ -25,3 +25,45 @@ th {
 .pusta-komorka {
     background-color: #f4f4f4;
 }
+
+/* -------- MEDIA QUERIES: RESPONSYWNOŚĆ NA TELEFONIE -------- */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        display: none; /* Ukrywamy nagłówki na mobile */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+
+    td {
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    td::before {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 45%;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #333;
+    }
+
+    td:nth-child(1)::before { content: "Godzina"; }
+    td:nth-child(2)::before { content: "Poniedziałek"; }
+    td:nth-child(3)::before { content: "Wtorek"; }
+    td:nth-child(4)::before { content: "Środa"; }
+    td:nth-child(5)::before { content: "Czwartek"; }
+    td:nth-child(6)::before { content: "Piątek"; }
+}
