@@ -26,14 +26,13 @@ th {
     background-color: #f4f4f4;
 }
 
-/* -------- MEDIA QUERIES: RESPONSYWNOŚĆ NA TELEFONIE -------- */
 @media (max-width: 768px) {
     table, thead, tbody, th, td, tr {
         display: block;
     }
 
     thead tr {
-        display: none; /* Ukrywamy nagłówki na mobile */
+        display: none;
     }
 
     tr {
