@@ -1,2 +1,2 @@
-# Plan lekcji
-[https://planlekcjii.github.io/](https://planlekcjii.github.io/).
+# PlanLekcji klasy 7A (projekt)
+[https://planlekcjii.github.io/](https://planlekcjii.github.io/)
