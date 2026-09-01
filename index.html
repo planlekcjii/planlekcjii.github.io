@@ -1,102 +1,163 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, height=720, initial-scale=1.0, user-scalable=no">
-    <title>PlanLekcji 7A</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7A — PlanLekcji</title>
+<style>
+  body{
+    margin:0;
+    padding:0.6rem;
+    background:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#000;
+  }
+  .title{
+    font-weight:700;
+    font-size:1rem;
+    padding:0.3rem 0.1rem 0.6rem;
+  }
+  .scroll{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:900px;
+    font-size:0.78rem;
+  }
+  th, td{
+    border:1px solid #000;
+    padding:2px 4px;
+    text-align:left;
+    vertical-align:top;
+  }
+  th{
+    background:#eee;
+    text-align:center;
+    font-weight:700;
+  }
+  .timecol{
+    width:70px;
+    text-align:center;
+    background:#f5f5f5;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .timecol .nr{display:block; font-size:0.9rem;}
+  .timecol .hr{display:block; font-weight:400; font-size:0.68rem; color:#333;}
+  .ncell{width:26px; text-align:center; font-weight:700;}
+  .pcell{min-width:110px;}
+  .scell{width:40px; text-align:center;}
+  .split{border-bottom:1px dashed #999; padding-bottom:2px; margin-bottom:2px;}
+  .split:last-child{border-bottom:none; margin-bottom:0; padding-bottom:0;}
+  .empty{background:#fafafa;}
+</style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Godzina</th>
-                <th>Poniedziałek</th>
-                <th>Wtorek</th>
-                <th>Środa</th>
-                <th>Czwartek</th>
-                <th>Piątek</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>08:00 - 08:45</td>
-                <td class="pusta-komorka"></td>
-                <td class="pusta-komorka"></td>
-                <td>BB/KA | WF | JUDO/BOKS</td>
-                <td>AI | Matematyka | 28</td>
-                <td>CR/IJ | J. Angielski | 26/29</td>
-            </tr>
-            <tr>
-                <td>08:55 - 09:40</td>
-                <td>Zajęcia z wychowawcą <br> 31 <br> Skok Ewa</td>
-                <td>Historia <br> 22 <br> Podpirko Adrian</td>
-                <td>Wychowanie fizyczne <br> gw./judo <br> Kaniewski Mikołaj/Wasielak Barbara</td>
-                <td class="pusta-komorka"></td>
-                <td>Matematyka <br> 34 <br> Skok Ewa</td>
-            </tr>
-            <tr>
-                <td>09:50 - 10:35</td>
-                <td>Informatyka [G1] / Język angielski [G2] <br> 25/30 <br> Skuza Agnieszka/Stokowiecka Aleksandra</td>
-                <td>Matematyka <br> 34 <br> Skok Ewa</td>
-                <td>Język polski <br> 26 <br> Pera Agnieszka</td>
-                <td class="pusta-komorka"></td>
-                <td>Basen <br> Basen <br> Kaniewski Mikołaj/Wasielak Barbara</td>
-            </tr>
-            <tr>
-                <td>10:45 - 11:30</td>
-                <td>Język angielski [G1] / Informatyka [G2]  <br> 26/25 <br> Chrupała Katarzyna/Skuza Agnieszka</td>
-                <td>Biologia <br> 33 <br> Piela Agnieszka</td>
-                <td>Geografia <br> 32 <br> Marcisz Elwira</td>
-                <td class="pusta-komorka"></td>
-                <td>Basen <br> Basen <br> Kaniewski Mikołaj/Wasielak Barbara</td>
-            </tr>
-            <tr>
-                <td>11:40 - 12:25</td>
-                <td>Język polski <br> 23 <br> Pera Agnieszka</td>
-                <td class="pusta-komorka"></td>
-                <td>Technika <br> 25 <br> Pusz Anna</td>
-                <td>Język polski <br> 23 <br> Pera Agnieszka</td>
-                <td>Język polski <br> 24 <br> Pera Agnieszka</td>
-            </tr>
-            <tr>
-                <td>12:40 - 13:25</td>
-                <td>Edukacja zdrowotna <br> 18 <br> Woźniak Tomasz</td>
-                <td class="pusta-komorka"></td>
-                <td>Matematyka <br> 23 <br> Skok Ewa</td>
-                <td>Język polski <br> 23 <br> Pera Agnieszka</td>
-                <td>Język angielski [G1] / Język angielski [G2] <br> 26/21 <br> Chrupała Katarzyna/Stokowiecka Aleksandra</td>
-            </tr>
-            <tr>
-                <td>13:40 - 14:25</td>
-                <td class="pusta-komorka"></td>
-                <td class="pusta-komorka"></td>
-                <td>Plastyka <br> 23 <br> Buryło-Sikora Katarzyna</td>
-                <td>Matematyka <br> 32 <br> Skok Ewa</td>
-                <td>Historia <br> 22 <br> Podpirko Adrian</td>
-            </tr>
-            <tr>
-                <td>14:35 - 15:20</td>
-                <td class="pusta-komorka"></td>
-                <td class="pusta-komorka"></td>
-                <td>Religia <br> 22 <br> Soroczyńska Sylwia</td>
-                <td>Język angielski [G1] / Język angielski [G2] <br> 26/24 <br> Chrupała Katarzyna/Stokowiecka Aleksandra</td>
-                <td class="pusta-komorka"></td>
-            </tr>
-            <tr>
-                <td>15:30 - 16:15</td>
-                <td class="pusta-komorka"></td>
-                <td class="pusta-komorka"></td>
-                <td class="pusta-komorka"></td>
-                <td>Muzyka <br> 23 <br> Jaśkiewicz Bogna</td>
-                <td class="pusta-komorka"></td>
-            </tr>
-        </tbody>
-    </table>
+
+<div class="title">7A PlanLekcji – wersja z 28.08.2026</div>
+
+<div class="scroll">
+<table>
+<thead>
+<tr>
+  <th rowspan="2"></th>
+  <th colspan="3">Poniedziałek</th>
+  <th colspan="3">Wtorek</th>
+  <th colspan="3">Środa</th>
+  <th colspan="3">Czwartek</th>
+  <th colspan="3">Piątek</th>
+</tr>
+<tr>
+  <th class="ncell">N</th><th class="pcell">P</th><th class="scell">S</th>
+  <th class="ncell">N</th><th class="pcell">P</th><th class="scell">S</th>
+  <th class="ncell">N</th><th class="pcell">P</th><th class="scell">S</th>
+  <th class="ncell">N</th><th class="pcell">P</th><th class="scell">S</th>
+  <th class="ncell">N</th><th class="pcell">P</th><th class="scell">S</th>
+</tr>
+</thead>
+<tbody id="body"></tbody>
+</table>
+</div>
+
+<script>
+function e(n,p,s){ return {n,p,s}; }
+const TIMES = {
+  1:"8:00–8:45", 2:"8:55–9:40", 3:"9:50–10:35", 4:"10:45–11:30",
+  5:"11:40–12:25", 6:"12:40–13:25", 7:"13:40–14:25", 8:"14:35–15:20", 9:"15:30–16:15"
+};
+
+const DAYS = ["Poniedziałek","Wtorek","Środa","Czwartek","Piątek"];
+const DATA = {
+  "Poniedziałek": {
+    3:[e("AI","Matematyka","34")],
+    4:[e("AP","J. polski","30")],
+    5:[e("PI","Biologia","28")],
+    6:[e("EM","Geografia","32")],
+    7:[e("CR","J. angielski - G1","26"), e("IJ","J. angielski - G2","30")],
+    8:[e("SE","J. niemiecki - G1","30"), e("MS","J. niemiecki - G2","26")],
+    9:[e("BB","Religia","34")]
+  },
+  "Wtorek": {
+    2:[e("KC","Informatyka - G1","25"), e("IJ","J. angielski - G2","27")],
+    3:[e("MU","Chemia","33")],
+    4:[e("DA","E. Zdrowotna","30")],
+    5:[e("JŚ","Muzyka","23")],
+    6:[e("AI","Matematyka","24")],
+    7:[e("PO","Historia","22")],
+    8:[e("CR","J. angielski - G1","26"), e("KC","Informatyka - G2","25")]
+  },
+  "Środa": {
+    1:[e("BB","WF - Ch.","JUD2"), e("Ka","WF - Dz.","BOKS")],
+    2:[e("BB","WF - Ch.","BOKS"), e("Ka","WF - Dz.","JUD2")],
+    3:[e("AI","Matematyka","29")],
+    4:[e("KB","Plastyka","31")],
+    5:[e("EM","Geografia","32")],
+    6:[e("MU","Fizyka","33")],
+    7:[e("AP","J. polski","30")],
+    8:[e("AP","J. polski","30")]
+  },
+  "Czwartek": {
+    1:[e("AI","Matematyka","28")],
+    2:[e("AI","Matematyka","28")],
+    3:[e("BB","WF - Ch.","JUD2"), e("Ka","WF - Ch.","JUD1")],
+    4:[e("BB","WF - Ch.","JUD1"), e("Ka","WF - Ch.","s.gim")],
+    5:[e("AP","J. polski","32")],
+    6:[e("JŚ","Godz. Wych.","23")]
+  },
+  "Piątek": {
+    1:[e("CR","J. angielski - G1","26"), e("IJ","J. angielski - G2","29")],
+    2:[e("SE","J. niemiecki - G1","24"), e("MS","J. niemiecki - G2","34")],
+    3:[e("PO","Historia","22")],
+    4:[e("AP","J. polski","22")],
+    5:[e("PI","Biologia","23")],
+    6:[e("MU","Fizyka","33")],
+    7:[e("MU","Chemia","33")]
+  }
+};
+
+function buildCells(day, row){
+  const entries = DATA[day][row];
+  if(!entries){
+    return `<td class="ncell empty"></td><td class="pcell empty"></td><td class="scell empty"></td>`;
+  }
+  const nHtml = entries.map(en => `<div class="split">${en.n}</div>`).join("");
+  const pHtml = entries.map(en => `<div class="split">${en.p}</div>`).join("");
+  const sHtml = entries.map(en => `<div class="split">${en.s}</div>`).join("");
+  return `<td class="ncell">${nHtml}</td><td class="pcell">${pHtml}</td><td class="scell">${sHtml}</td>`;
+}
+
+const tbody = document.getElementById("body");
+for(let r=1; r<=9; r++){
+  const tr = document.createElement("tr");
+  let html = `<td class="timecol"><span class="nr">${r}</span><span class="hr">${TIMES[r]}</span></td>`;
+  DAYS.forEach(day => { html += buildCells(day, r); });
+  tr.innerHTML = html;
+  tbody.appendChild(tr);
+}
+</script>
+
 </body>
 </html>
-
-
-
-
-
